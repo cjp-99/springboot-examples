@@ -1,0 +1,10 @@
+spring:
+  kafka:
+    bootstrap-servers: 192.168.30.129:9092
+    template:
+      default-topic: test
+  redis:
+    database: 11
+    host: 172.16.4.226
+    port: 7381
+    password: 9pbsoq6hoNhhTzl

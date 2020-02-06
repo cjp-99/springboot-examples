@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 采用默认配置对日志格式化进行输出 -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!-- 从配置中心application.yml读取到配置 -->
+    <springProperty scope="context" name="FILE_NAME_PATTERN"
+                    source="logback.file-pattern" defaultValue="logs/spring-%d{yyyy-MM-dd}.log"/>
+
+
+    <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+
+    <!-- 扫描包日志配置 -->
+    <logger name="com.netflix" level="WARN"/>
+    <logger name="cn.selinx" level="DEBUG" />
+    <logger name="org.springframework.web" level="INFO"/>
+    <logger name="org.apache.kafka" level="off" />
+
+</configuration>
