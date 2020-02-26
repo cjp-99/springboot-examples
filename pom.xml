@@ -9,6 +9,7 @@
     <version>0.0.1</version>
     <modules>
         <module>spring-boot-kafka</module>
+        <module>spring-boot-rabbitmq</module>
     </modules>
     <packaging>pom</packaging>
 
